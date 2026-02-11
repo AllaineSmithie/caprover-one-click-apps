@@ -847,31 +847,31 @@ caproverOneClickApp:
       id: $$cap_APP_VERSION
       description: Check out their valid tags at
         https://hub.docker.com/r/appwrite/appwrite/tags
-      defaultValue: 1.7.4
+      defaultValue: '1.7.4'
       validRegex: /^([^\s^\/])+$/
     - label: Console Version Tag
       id: $$cap_CONSOLE_VERSION
       description: Check out their valid tags at
         https://hub.docker.com/r/appwrite/console/tags
-      defaultValue: 6.0.13
+      defaultValue: '6.0.13'
       validRegex: /^([^\s^\/])+$/
     - label: Assistant Version Tag
       id: $$cap_ASSISTANT_VERSION
       description: Check out their valid tags at
         https://hub.docker.com/r/appwrite/assistant/tags
-      defaultValue: 0.4.0
+      defaultValue: '0.4.0'
       validRegex: /^([^\s^\/])+$/
     - label: Browser Version Tag
       id: $cap_BROWSER_VERSION
       description: Check out their valid tags at
         https://hub.docker.com/r/appwrite/browser/tags
-      defaultValue: 0.2.4
+      defaultValue: '0.2.4'
       validRegex: /^([^\s^\/])+$/
     - label: OpenRuntimes Executor Version Tag
       id: $cap_OPENRUNTIMES_EXECUTOR_VERSION
       description: Check out their valid tags at
         https://hub.docker.com/r/openruntimes/executor/tags
-      defaultValue: 0.7.23
+      defaultValue: '0.7.14'
       validRegex: /^([^\s^\/])+$/
     - label: _APP_ENV
       id: $cap_APP_ENV
@@ -985,7 +985,7 @@ caproverOneClickApp:
       id: $cap_APP_DOMAIN_TARGET_CNAME
       description: A DNS CNAME record hostname to serve as a target for your Appwrite
         custom domains.
-      defaultValue: $cap_appname.$cap_root_domain
+      defaultValue: $$cap_appname.$$cap_root_domain
     - label: _APP_DOMAIN_TARGET_AAAA
       id: $cap_APP_DOMAIN_TARGET_AAAA
       description: A DNS AAAA record value to serve as a target for your Appwrite
@@ -1037,12 +1037,12 @@ caproverOneClickApp:
     - label: _APP_DB_PASS
       id: $cap_APP_DB_PASS
       description: MariaDB server user password.
-      defaultValue: $cap_gen_random_hex(16)
+      defaultValue: $$cap_gen_random_hex(16)
       validRegex: /.{8,}/
     - label: _APP_DB_ROOT_PASS
       id: $cap_APP_DB_ROOT_PASS
       description: MariaDB server root password.
-      defaultValue: $cap_gen_random_hex(16)
+      defaultValue: $$cap_gen_random_hex(16)
       validRegex: /.{8,}/
     - label: _APP_SMTP_HOST
       id: $cap_APP_SMTP_HOST
@@ -1227,13 +1227,13 @@ caproverOneClickApp:
     - label: _APP_COMPUTE_CPUS
       id: $cap_APP_COMPUTE_CPUS
       description: The maximum number of CPU core a single cloud function is allowed to use.
-      defaultValue: 0
+      defaultValue: 1
       validRegex: /.{1,}/
     - label: _APP_COMPUTE_MEMORY
       id: $cap_APP_COMPUTE_MEMORY
       description: The maximum amount of memory a single cloud function is allowed to
         use in megabytes.
-      defaultValue: 0
+      defaultValue: 512
       validRegex: /.{1,}/
     - label: _APP_FUNCTIONS_RUNTIMES
       id: $cap_APP_FUNCTIONS_RUNTIMES
@@ -1281,7 +1281,7 @@ caproverOneClickApp:
     - label: _APP_MAINTENANCE_DELAY
       id: $cap_APP_MAINTENANCE_DELAY
       description: Delay in seconds before starting maintenance tasks.
-      defaultValue: 0
+      defaultValue: 1
       validRegex: /.{1,}/
     - label: _APP_MAINTENANCE_START_TIME
       id: $cap_APP_MAINTENANCE_START_TIME
