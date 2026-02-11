@@ -871,7 +871,7 @@ caproverOneClickApp:
       id: $cap_OPENRUNTIMES_EXECUTOR_VERSION
       description: Check out their valid tags at
         https://hub.docker.com/r/openruntimes/executor/tags
-      defaultValue: 0.7.14
+      defaultValue: 0.7.23
       validRegex: /^([^\s^\/])+$/
     - label: _APP_ENV
       id: $cap_APP_ENV
