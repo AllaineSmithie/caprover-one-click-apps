@@ -1,9 +1,9 @@
 captainVersion: 4
 services:
     $$cap_appname-db:
-        image: bitnamilegacy/supabase-postgres:$$cap_app_version
+        image: supabase/postgres:$$cap_app_version
         volumes:
-            - $$cap_appname-db-persistence:/bitnami/postgresql
+            - $$cap_appname-db-persistence:/supabase/postgres
         restart: always
         environment:
             POSTGRES_USER: $$cap_pg_user
@@ -24,8 +24,8 @@ caproverOneClickApp:
     variables:
         - id: $$cap_app_version
           label: Postgres Version
-          defaultValue: '15.1.0'
-          description: Check out their Docker page for the valid tags https://hub.docker.com/r/bitnamilegacy/supabase-postgres/tags
+          defaultValue: '15.14.0'
+          description: Check out their Docker page for the valid tags https://hub.docker.com/r/supabase/postgres/tags
           validRegex: /^([^\s^\/])+$/
 
         - id: $$cap_pg_user
