@@ -973,13 +973,13 @@ caproverOneClickApp:
       id: $cap_APP_OPENSSL_KEY_V1
       description: Server private secret key used to encrypt all sensitive data.
         Generate with openssl rand -base64 32
-      defaultValue: $cap_gen_random_hex(256)
+      defaultValue: $$cap_gen_random_hex(256)
       validRegex: /.{32,}/
     - label: _APP_DOMAIN
       id: $cap_APP_DOMAIN_NAME
       description: Your Appwrite domain address. When setting a public suffix domain,
         Appwrite will attempt to issue a valid SSL certificate automatically.
-      defaultValue: https://$cap_appname.$cap_root_domain
+      defaultValue: https://$$cap_appname.$$cap_root_domain
       validRegex: /^([^\s^\/])+$/
     - label: _APP_DOMAIN_TARGET_CNAME
       id: $cap_APP_DOMAIN_TARGET_CNAME
@@ -1000,12 +1000,12 @@ caproverOneClickApp:
       id: $cap_APP_DOMAIN_FUNCTIONS
       description: A domain to use for function preview URLs. Setting to empty turns
         off function preview URLs.
-      defaultValue: https://$cap_appname.$cap_root_domain
+      defaultValue: https://$$cap_appname.$$cap_root_domain
     - label: _APP_DOMAIN_SITES
       id: $cap_APP_DOMAIN_SITES
       description: A domain to use for hosting static sites. Setting to empty turns
         off static sites hosting.
-      defaultValue: https://$cap_appname.$cap_root_domain
+      defaultValue: https://$$cap_appname.$$cap_root_domain
     - label: _APP_REDIS_PORT
       id: $cap_APP_REDIS_PORT
       description: Redis server TCP port.
@@ -1249,7 +1249,7 @@ caproverOneClickApp:
       id: $cap_APP_EXECUTOR_SECRET
       description: The secret key used by Appwrite to communicate with the function
         executor. Generate with openssl rand -base64 32
-      defaultValue: $cap_gen_random_hex(256)
+      defaultValue: $$cap_gen_random_hex(256)
       validRegex: /.{32,}/
     - label: _APP_COMPUTE_INACTIVE_THRESHOLD
       id: $cap_APP_COMPUTE_INACTIVE_THRESHOLD
