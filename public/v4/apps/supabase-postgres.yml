@@ -24,7 +24,7 @@ caproverOneClickApp:
     variables:
         - id: $$cap_app_version
           label: Postgres Version
-          defaultValue: '15.14.0'
+          defaultValue: '15.14.1.081'
           description: Check out their Docker page for the valid tags https://hub.docker.com/r/supabase/postgres/tags
           validRegex: /^([^\s^\/])+$/
 
@@ -95,4 +95,4 @@ caproverOneClickApp:
     displayName: Supabase PostgreSQL
     isOfficial: true
     description: Supabase makes it easy to use Postgres.
-    documentation: Taken from https://hub.docker.com/r/bitnamilegacy/supabase-postgres
+    documentation: Taken from https://hub.docker.com/r/supabase/postgres
